@@ -1,0 +1,108 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+    "header"
+    "main";
+}
+header {
+  grid-area: header;
+  text-align: center;
+  padding-top: 15px;
+  border-bottom: 1px solid #b8d7ee;
+}
+main {
+  grid-area: main;
+}
+#content {
+  height: 100%;
+  background: white;
+  display: grid;
+  grid-template-areas:
+    "location temperature temperature"
+    "condition temperature temperature"
+    "date temperature temperature"
+    "humidity wind precipitate";
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  background: #d5eaf4;
+}
+#searchBar {
+  width: 150px;
+  height: 20px;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #b8d7ee;
+  border-radius: 10px;
+}
+.locationDiv {
+  grid-area: location;
+  padding-top: 15px;
+  padding-left: 15px;
+  font-size: 30px;
+}
+.temperatureDiv {
+  grid-area: temperature;
+  text-align: center;
+  border-radius: 10px;
+  height: 300px;
+  font-size: 75px;
+  font-weight: bold;
+}
+.conditionDiv {
+  grid-area: condition;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.dateDiv {
+  grid-area: date;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.locationDiv,
+.conditionDiv,
+.dateDiv {
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.humidityDiv {
+  grid-area: humidity;
+  background-color: #ebedef;
+}
+.windDiv {
+  grid-area: wind;
+  background-color: #e5e7e9;
+}
+.precipitateDiv {
+  grid-area: precipitate;
+  background-color: #ebedef;
+}
+.humidityDiv,
+.windDiv,
+.precipitateDiv {
+  border: none;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid #d6eaf8;
+  border-left: 6px solid #95d6ea;
+  text-align: center;
+}
+.humidityDiv > p {
+  font-size: 30px;
+}
+.windDiv > p {
+  font-size: 30px;
+}
+.precipitateDiv > p {
+  font-size: 30px;
+}
